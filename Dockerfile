@@ -20,8 +20,10 @@ RUN \
 	bind-tools \
 	curl \
 	openssh-client \
+	python \
 	smokeping \
 	ssmtp \
+	speedtest-cli \
 	sudo \
 	tcptraceroute \
 	ttf-dejavu && \
