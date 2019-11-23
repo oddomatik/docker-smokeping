@@ -4,3 +4,15 @@
 
 binary = /usr/sbin/fping
 
++ speedtest
+binary = /usr/bin/speedtest-cli
+timeout = 300
+step = 3600
+offset = random
+pings = 3
+
+++ speedtest-download
+measurement = download
+
+++ speedtest-upload
+measurement = upload
