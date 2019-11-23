@@ -12,6 +12,29 @@ From the linuxserver.io build of this image, speedtest-cli capability has been a
 
 See further: [mad-ady/smokeping-speedtest](https://github.com/mad-ady/smokeping-speedtest)
 
+## Troubleshooting
+
+Make sure the following is in your /config/Probes file if you receive an error about missing probes:
+
+```
++ speedtest
+binary = /usr/bin/speedtest-cli
+timeout = 300
+step = 3600
+offset = random
+pings = 3
+
+++ speedtest-download
+measurement = download
+
+++ speedtest-upload
+measurement = upload
+```
+
+Read about Target file configuration here:
+
+https://github.com/mad-ady/smokeping-speedtest/blob/master/README.md
+
 The rest of this README is copied from upstream and may not be current.
 
 ## Supported Architectures
