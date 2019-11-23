@@ -1,46 +1,18 @@
-[![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)](https://linuxserver.io)
-
-[![Blog](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=Blog)](https://blog.linuxserver.io "all the things you can do with our containers including How-To guides, opinions and much more!")
-[![Discord](https://img.shields.io/discord/354974912613449730.svg?style=flat-square&color=E68523&label=Discord&logo=discord&logoColor=FFFFFF)](https://discord.gg/YWrKVTn "realtime support / chat with the community and the team.")
-[![Discourse](https://img.shields.io/discourse/https/discourse.linuxserver.io/topics.svg?style=flat-square&color=E68523&logo=discourse&logoColor=FFFFFF)](https://discourse.linuxserver.io "post on our community forum.")
-[![Fleet](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=Fleet)](https://fleet.linuxserver.io "an online web interface which displays all of our maintained images.")
-[![GitHub](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=GitHub&logo=github&logoColor=FFFFFF)](https://github.com/linuxserver "view the source for all of our repositories.")
-[![Podcast](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=Podcast)](https://anchor.fm/linuxserverio "on hiatus. Coming back soon (late 2018).")
-[![Open Collective](https://img.shields.io/opencollective/all/linuxserver.svg?style=flat-square&color=E68523&label=Supporters&logo=open%20collective&logoColor=FFFFFF)](https://opencollective.com/linuxserver "please consider helping us by either donating or contributing to our budget")
-
-The [LinuxServer.io](https://linuxserver.io) team brings you another container release featuring :-
-
- * regular and timely application updates
- * easy user mappings (PGID, PUID)
- * custom base image with s6 overlay
- * weekly base OS updates with common layers across the entire LinuxServer.io ecosystem to minimise space usage, down time and bandwidth
- * regular security updates
-
-Find us at:
-* [Blog](https://blog.linuxserver.io) - all the things you can do with our containers including How-To guides, opinions and much more!
-* [Discord](https://discord.gg/YWrKVTn) - realtime support / chat with the community and the team.
-* [Discourse](https://discourse.linuxserver.io) - post on our community forum.
-* [Fleet](https://fleet.linuxserver.io) - an online web interface which displays all of our maintained images.
-* [GitHub](https://github.com/linuxserver) - view the source for all of our repositories.
-* [Podcast](https://anchor.fm/linuxserverio) - on hiatus. Coming back soon (late 2018).
-* [Open Collective](https://opencollective.com/linuxserver) - please consider helping us by either donating or contributing to our budget
+Please refer to upstream for up-to-date README:
 
 # [linuxserver/smokeping](https://github.com/linuxserver/docker-smokeping)
-
-[![GitHub Stars](https://img.shields.io/github/stars/linuxserver/docker-smokeping.svg?style=flat-square&color=E68523&logo=github&logoColor=FFFFFF)](https://github.com/linuxserver/docker-smokeping)
-[![GitHub Release](https://img.shields.io/github/release/linuxserver/docker-smokeping.svg?style=flat-square&color=E68523&logo=github&logoColor=FFFFFF)](https://github.com/linuxserver/docker-smokeping/releases)
-[![GitHub Package Repository](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=GitHub%20Package&logo=github&logoColor=FFFFFF)](https://github.com/linuxserver/docker-smokeping/packages)
-[![GitLab Container Registry](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=GitLab%20Registry&logo=gitlab&logoColor=FFFFFF)](https://gitlab.com/Linuxserver.io/docker-smokeping/container_registry)
-[![Quay.io](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=Quay.io)](https://quay.io/repository/linuxserver.io/smokeping)
-[![MicroBadger Layers](https://img.shields.io/microbadger/layers/linuxserver/smokeping.svg?style=flat-square&color=E68523)](https://microbadger.com/images/linuxserver/smokeping "Get your own version badge on microbadger.com")
-[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/smokeping.svg?style=flat-square&color=E68523&label=pulls&logo=docker&logoColor=FFFFFF)](https://hub.docker.com/r/linuxserver/smokeping)
-[![Docker Stars](https://img.shields.io/docker/stars/linuxserver/smokeping.svg?style=flat-square&color=E68523&label=stars&logo=docker&logoColor=FFFFFF)](https://hub.docker.com/r/linuxserver/smokeping)
-[![Build Status](https://ci.linuxserver.io/view/all/job/Docker-Pipeline-Builders/job/docker-smokeping/job/master/badge/icon?style=flat-square)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-smokeping/job/master/)
-[![](https://lsio-ci.ams3.digitaloceanspaces.com/linuxserver/smokeping/latest/badge.svg)](https://lsio-ci.ams3.digitaloceanspaces.com/linuxserver/smokeping/latest/index.html)
 
 [Smokeping](https://oss.oetiker.ch/smokeping/) keeps track of your network latency. For a full example of what this application is capable of visit [UCDavis](http://smokeping.ucdavis.edu/cgi-bin/smokeping.fcgi).
 
 [![smokeping](https://camo.githubusercontent.com/e0694ef783e3fd1d74e6776b28822ced01c7cc17/687474703a2f2f6f73732e6f6574696b65722e63682f736d6f6b6570696e672f696e632f736d6f6b6570696e672d6c6f676f2e706e67)](https://oss.oetiker.ch/smokeping/)
+
+## Modifications
+
+From the linuxserver.io build of this image, speedtest-cli capability has been added. Default Probe settings are 3600 seconds, but this can be modified with the "step" parameter in the /config/Probes file.
+
+See further: [mad-ady/smokeping-speedtest](https://github.com/mad-ady/smokeping-speedtest)
+
+The rest of this README is copied from upstream and may not be current.
 
 ## Supported Architectures
 
@@ -197,28 +169,3 @@ docker run --rm --privileged multiarch/qemu-user-static:register --reset
 ```
 
 Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64`.
-
-## Versions
-
-* **28.06.19:** - Rebasing to alpine 3.10.
-* **23.03.19:** - Switching to new Base images, shift to arm32v7 tag.
-* **22.02.19:** - Rebasing to alpine 3.9.
-* **14.11.18:** - Allow access without /smokeping in URL.
-* **28.04.18:** - Rebase to alpine 3.8.
-* **09.04.18:** - Add bc package.
-* **08.04.18:** - Add tccping script and tcptraceroute package (thanks rcarmo).
-* **13.12.17:** - Expose httpd_conf to /config.
-* **13.12.17:** - Rebase to alpine 3.7.
-* **24.07.17:** - Add :unraid tag for hosts without ipv6.
-* **12.07.17:** - Add inspect commands to README, move to jenkins build and push.
-* **28.05.17:** - Rebase to alpine 3.6.
-* **07.05.17:** - Expose smokeping.conf in /config/site-confs to allow user customisations
-* **12.04.17:** - Fix cropper.js path, thanks nibbledeez.
-* **09.02.17:** - Rebase to alpine 3.5.
-* **17.10.16:** - Add ttf-dejavu package as per [LT forum](http://lime-technology.com/forum/index.php?topic=43602.msg507875#msg507875).
-* **10.09.16:** - Add layer badges to README.
-* **05.09.16:** - Add curl package.
-* **28.08.16:** - Add badges to README.
-* **25.07.16:** - Rebase to alpine linux.
-* **23.07.16:** - Fix apt script confusion.
-* **29.06.15:** - This is the first release, it is mostly stable, but may contain minor defects. (thus a beta tag)
